@@ -1,0 +1,250 @@
+   
+    .days-of-week {
+        display: grid;
+        grid-template-columns: 6vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 18vw; 
+        grid-template-rows: auto; 
+        gap: 2.5vw; 
+        position: absolute;
+        top: 14vh;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: -1;
+    }
+    
+    .meal-type-labels {
+        grid-column: 1 / 2;
+        display: grid;
+        grid-template-columns: 6vw;
+        grid-template-rows: 12vh 19vh 19vh 19vh 3vh 2vh 2vh 2vh;
+        align-items: center;
+        justify-items: center;
+        font-size: 2.5vh;
+        letter-spacing: 0.5vh;
+    /*
+        color: #387F39;
+    */
+        }
+    .meal-type-bf {
+        grid-row: 2/3;
+    }
+    .meal-type-l {
+        grid-row: 3/4;
+    }
+    .meal-type-d {
+        grid-row: 4/5;
+    }
+    .meal-type-cal-needed {
+        grid-row: 6/7;
+        font-size: 1.2vh;
+    }
+    .meal-type-cal-ate {
+        grid-row: 7/8;
+        font-size: 1.2vh;
+    }
+    .meal-type-cal-dif {
+        grid-row: 8/9;
+        font-size: 1.2vh;
+    }
+
+
+    .day {
+        display: grid;
+        grid-template-columns: 7vw;
+        grid-template-rows: 3vh 3vh 3vh 19vh 19vh 19vh 2vh 2vh 2vh 2vh;
+        gap: 0.5vh;
+        align-items: center;
+        justify-items: center;
+    }
+    .breakfast {
+        grid-row: 4 / 5;
+    }
+    .lunch {
+        grid-row: 5 / 6;
+    }
+    .dinner {
+        grid-row: 6 / 7;
+    }
+    .kcal-need {
+        grid-row: 8/9
+    }    
+    .kcal-took {
+        grid-row: 9/10
+    }
+    .kcal-diff {
+        font-weight: 600;
+        grid-row: 10/11
+    }
+    .positive {
+        color: red;
+    }
+    .negative{
+        color: green
+    }
+    
+    .food {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2vh;
+        border-radius: 30px;
+        width: 7vw; 
+        /*
+        background-color: #bfdc747e;
+        */
+        background: rgb(56,127,57);
+        background: linear-gradient(45deg, rgba(56, 127, 57, 0.7) 0%, rgba(191,220,116,0.7) 50%, rgba(56,127,57,0.7) 100%);
+        border: solid 1px #387f3971;
+        cursor: pointer;
+    }
+    .food:hover {        
+        background-color: #bfdc74;
+        border: solid 1px #387f39;
+    }
+    .food-title{
+        font-size: 1.5vh;
+    }
+    .food-img {
+        border-radius: 50px;
+        width: 5vw;
+        height: 5vw;
+    }
+    .food-kcal {
+        font-size: 2vh;
+    }
+    
+    
+
+.weekly-stat {
+    grid-column: -2 / -1;
+    display: grid;
+    grid-template-columns: 18vw;
+    grid-template-rows: 5vh 6vh 5vh 5vh 5vh 40vh;
+    align-items: center;
+    justify-items: center;
+    background-color: #c5da8f;
+    border-radius: 15px;
+    border: solid 1px #387F39;
+    
+}
+.stat-title {
+    grid-row: 2 / 3; 
+    background-color: #387F39;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: 700;
+}
+.stat-weekly-kcal-title {
+    grid-row: 4 / 5;
+    background-color: #387f398e;
+    width: 100%;
+    height: 70%;
+    align-content: center;
+    text-align: center;
+    font-size: 2vh;
+    font-weight: 500;
+}
+.stat-weekly-kcal {
+    grid-row: 5 / 6;
+    font-size: 4vh;
+}
+
+.stat-chart {
+    grid-row: 6 / 7;
+}
+
+
+.date {
+    display: flex;
+    z-index: -1;
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    top: 9vh;
+    left:50%;
+    transform: translateX(-50%);  
+    /*
+    width: 64vw;
+    left:12vw;
+*/
+}
+.date-minus, .date-plus {
+    border: solid 1px #387F39;
+    color: #387F39 ;
+    font-weight: 500;
+    height: 4vh;
+    width: 6vw;
+    font-size: 2vh;
+    background-color: #BEDC74;
+    cursor: pointer;
+}
+.date-minus {
+    border-right: none;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.date-plus {
+    border-left: none;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.date-minus:hover, .date-plus:hover {
+    background-color: #387F39;
+    color: #BEDC74;
+}
+.date-minus:active, .date-plus:active {
+    background-color: #558a56;
+}
+
+
+.meal-type-labels {
+    font-weight: 700;
+}
+
+.day-date {
+    font-weight: 700;
+}
+.day-title {
+    font-weight: 500;
+    font-size: 2vh;
+}
+
+.calendar-styles {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 12vh;
+    left:2vw;
+    width: 8vw;
+
+}
+.calendar-style {
+width: 100%;
+border: solid 1px #387F39;
+color: #387F39 ;
+font-weight: 500;
+height: 4vh;
+font-size: 2vh;
+background-color: #BEDC74;
+cursor: pointer;
+}
+.calendar-style:hover {
+    background-color: #387F39;
+    color: #BEDC74;
+}
+.calendar-style:active {
+    background-color: #558a56;
+}
+.monthly {
+    border-bottom: none;
+    border-top-left-radius: 15px ;
+    border-top-right-radius: 15px ;
+}
+.weekly {
+    border-top:none ;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
